@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  apache:
+    build:
+      context: ./docker
+    volumes:
+      - .:/var/www/html
+      - ./docker/build/php.ini:/usr/local/etc/php/php.ini
+    env_file:
+      - docker/build/env
+    expose:
+      - 9000
+    ports:
+      - "6700:80"
+      - "63342:63342"
+
+  mysql:
+    image: mysql:5.6.23
+    ports:
+      - "3316:3306"
+    env_file:
+      - docker/build/env
+
+
