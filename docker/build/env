@@ -4,4 +4,4 @@ MYSQL_USER=database_user
 MYSQL_PASSWORD=database_password
 MYSQL_DATABASE=database_name
 PHP_XDEBUG_ENABLED: 1
-XDEBUG_CONFIG: remote_host=docker.for.mac.host.internal
+XDEBUG_CONFIG: remote_host=host.docker.internal
