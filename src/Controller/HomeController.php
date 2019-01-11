@@ -32,9 +32,9 @@ class HomeController extends Controller
         }
 
         // Dumb profile test
-        /*for ($i = 1;$i <= 1000; $i++) {
-            file_put_contents('../var/log/test.log', 'ligne '.$i."\r\n", FILE_APPEND);
-        }*/
+        // for ($i = 1;$i <= 1000; $i++) {
+        //     file_put_contents('../var/log/test.log', 'ligne '.$i."\r\n", FILE_APPEND);
+        // }
 
         return $this->render('home.html.twig', array('project' => $project, 'image' => "$letter.gif"));
     }
