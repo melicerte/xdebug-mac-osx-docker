@@ -12,9 +12,10 @@ class HomeController extends Controller
 {
     /**
      * @Route("/", name="home")
+     * @param Request $request
      * @return Response
      */
-    public function index(Request $request)
+    public function index(Request $request): Response
     {
         $a = 97;
         $b = $a + 1;
@@ -31,11 +32,14 @@ class HomeController extends Controller
             $letter = \chr($b + 2);
         }
 
-        // Dumb profile test
-        // for ($i = 1;$i <= 1000; $i++) {
-        //     file_put_contents('../var/log/test.log', 'ligne '.$i."\r\n", FILE_APPEND);
-        // }
+        $this->doSomethingRecursive(1000);
 
         return $this->render('home.html.twig', array('project' => $project, 'image' => "$letter.gif"));
+    }
+
+    private function doSomethingRecursive($level): void {
+        if ($level >= 0) {
+            $this->doSomethingRecursive($level - 1);
+        }
     }
 }
