@@ -3,10 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Xdebug{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         {% block stylesheets %}{% endblock %}
+        <style>
+            body {
+                background: rgb(255, 204, 0);
+            }
+        </style>
     </head>
     <body>
-        {% block body %}{% endblock %}
+    <div class="mx-auto" style="width: 600px;">{% block body %}{% endblock %}</div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

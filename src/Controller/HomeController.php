@@ -32,7 +32,7 @@ class HomeController extends Controller
             $letter = \chr($b + 2);
         }
 
-        $this->doSomethingRecursive(1000);
+        // $this->doSomethingRecursive(1000);
 
         return $this->render('home.html.twig', array('project' => $project, 'image' => "$letter.gif"));
     }
