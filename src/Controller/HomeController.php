@@ -19,7 +19,7 @@ class HomeController extends Controller
     {
         $a = 97;
         $b = $a + 1;
-        $letter = \chr($b + 1);
+        $imageName = \chr($b + 1);
 
         $project = new Project();
         $project->setName("I can't find a way to debug this !");
@@ -29,12 +29,12 @@ class HomeController extends Controller
 
         if (null === $project->getName()) {
             $project->setName('Here it is.');
-            $letter = \chr($b + 2);
+            $imageName = \chr($b + 2);
         }
 
         // $this->doSomethingRecursive(1000);
 
-        return $this->render('home.html.twig', array('project' => $project, 'image' => "$letter.gif"));
+        return $this->render('home.html.twig', array('project' => $project, 'image' => "$imageName.gif"));
     }
 
     private function doSomethingRecursive($level): void {
