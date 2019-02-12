@@ -7,6 +7,7 @@
 ## Start 
 
 `docker-compose up -d`
+`composer install`
 
 ## Run
 
